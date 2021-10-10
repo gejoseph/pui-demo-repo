@@ -130,6 +130,15 @@ main {
     flex-direction: column;
 }
 
+button {
+    font-family: 'PT Serif', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 1em;
+    height: 3em;
+}
+
 .red-button {
     color: white;
     background-color: #840000;
@@ -147,7 +156,7 @@ main {
     background-color: #4a0101;
 }
 
-.product-details .red-button h3 {
+.product-details .red-button {
     margin: 0em;
 }
 
@@ -263,6 +272,7 @@ footer input[type="submit"]:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .details {
