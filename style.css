@@ -108,7 +108,7 @@ header {
 }
 
 #banner-section {
-    background-image: url("assets/landing-page-banner.png");
+    background-image: url("assets/landing-page-main.jpg");
     background-position:center;
     background-size: 100%;
     width: 100%;
@@ -276,15 +276,20 @@ footer input[type="submit"]:hover {
     margin: 0em 3em;
 }
 
-.details h4 {
+.details h4, .breadcrumb h4 {
     color: #000000;
 }
 
-.details a {
+.details a, .breadcrumb a {
     text-decoration: underline;
     color: #840000;
 }
 
+#products-content .breadcrumb {
+
+    margin: 2em 5em -2em 5em;
+
+}
 
 .details-content {
     width: 700px;
