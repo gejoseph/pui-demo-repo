@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>BunBun's Bake Shop</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <a href="index.html">
+                    <h1>BunBun</h1>
+                    <h3>BAKE SHOP</h3>
+                </a>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="none.html"><h2>ABOUT</h2></a></li>
+                    <li><a href="products.html"><h2>CINNAMON ROLLS</h2></a></li>
+                    <li><a href="none.html"><h2>LOCATIONS</h2></a></li>
+                    <li><a href="none.html"><img id="cart-link" src="assets/cart.png" alt="Cart"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="details">
+                <img width="450" src="assets/caramel-pecan-full.png" alt="Caramel Pecan Cinnamon Roll">
+                <div class="details-content">
+                    <h4 class="breadcrumb">
+                        <a href="index.html">Home</a> > 
+                        <a href="products.html">Cinnamon Rolls</a> >
+                        Caramel Pecan
+                    </h4>
+                    <h6>Caramel Pecan Cinnamon Roll</h6>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas posuere est auctor proin suspendisse. Nulla sit tristique tempus at ornare egestas. At integer convallis nulla vitae suspendisse suspendisse. Quisque purus euismod quis fringilla pellentesque eu eget enim. Amet, sit consequat massa euismod praesent amet, vitae, blandit venenatis. Ipsum, et tristique sollicitudin dolor augue pulvinar. Pulvinar morbi dui nibh mattis duis convallis. Vitae tempus facilisi dignissim vitae pretium potenti ullamcorper egestas. Ullamcorper ipsum amet massa quam vel pellentesque nisi, velit lacinia.</h4>
+                    <div class="customizations">
+                        <label for="glazes">Glaze:</label>
+                        <select id="glazes" name="glazes" class="glazes">
+                        <option value="No Glaze">No Glaze</option>
+                        <option value="Sugar Milk">Sugar Milk</option>
+                        <option value="Vanilla Milk">Vanilla Milk</option>
+                        <option value="Double Chocolate">Double Chocolate</option>
+                        </select>
+                        <label for="amount">Amount:</label>
+                        <select id="amount" name="amount" class="amount">
+                        <option value="1">1</option>
+                        <option value="3">3</option>
+                        <option value="6">6</option>
+                        <option value="12">12</option>
+                    </select>
+                    </div>
+                    <button type="button" class="red-button">Add to Cart<img width="15" src="assets/white-cart.png" alt="Add to Cart">
+                    </button>
+                </div>
+                <div class="details-nutrition">
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas posuere est auctor proin suspendisse. Nulla sit tristique tempus at ornare egestas. At integer convallis nulla vitae suspendisse suspendisse. Quisque purus euismod quis fringilla pellentesque eu eget enim. </h4>
+                    <h4><strong>Ingredients:</strong> enriched wheat flour (wheat, barley, niacin, reduced iron,
+                        thiamine mononitrate, riboflavin, folic acid), sugar, chocolate chunks
+                        (sugar, chocolate liquor, cocoa butter, soy lecithin, vanilla, salt),
+                        brown sugar, margarine (vegetable oil blend [palm fruit, soybean and
+                        olive oils], water, salt, non-fat dry milk, soy lecithin, monoglycerides,
+                        natural flavor, vitamin a palmitate, beta carotene color), butter, eggs,
+                        invert sugar, soy flour, salt, baking soda, natural vanilla flavor.</h4>
+                    <h4><strong>Contains:</strong> egg, milk, soy, wheat.</h4>
+                </div>
+                <img width="450" src="assets/ingredients.png" alt="Caramel Pecan Cinnamon Roll Ingredients">
+            </div>
+        </main>
+        <footer class="red-section">
+            <div id="footer-links">
+                <h3><a>FAQ</a></h3>
+                <h3><a>CONTACT US</a></h3>
+            </div>
+            <h3>© 2021 BunBun Bake Shop, All Rights Reserved</h3>
+            <div id="newsletter-sign-up">
+                <h2>Sign up for our newsletter!</h2>
+                <form>
+                    <input type="text" placeholder="Email">
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+        </footer>
+    </body>
+    <script src="main.js"></script>
+</html>

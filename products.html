@@ -17,7 +17,10 @@
                     <li><a href="none.html"><h2>ABOUT</h2></a></li>
                     <li><a href="products.html"><h2>CINNAMON ROLLS</h2></a></li>
                     <li><a href="none.html"><h2>LOCATIONS</h2></a></li>
-                    <li><a href="none.html"><img id="cart-link" src="assets/cart.png" alt="Cart"></a></li>
+                    <li><a class="cart-nav" href="cart.html">
+                        <img id="cart-link" src="assets/cart.png" alt="Cart">
+                        <p class="cart-count">(0)</p>
+                    </a></li>
                 </ul>
             </nav>
         </header>
@@ -35,42 +38,42 @@
                     <img src="assets/original-roll.png" alt="Original Cinnamon Roll">
                     <div class="product-details">
                         <h2>Original</h2>
-                        <button type="button" class="red-button" onclick="location.href='original-details.html'">See Details</button>
+                        <button type="button" class="red-button" onclick="location.href='details.html'; sessionStorage.setItem('productClicked', 'Original'); resetCustomizations()">See Details</button>
                     </div>
                 </div>
                 <div class="product">
                     <img src="assets/original-gf-roll.png" alt="Original Gluten Free Cinnamon Roll">
                     <div class="product-details">
                         <h2>Original (GF)</h2>
-                        <button type="button" class="red-button">See Details</button>
+                        <button type="button" class="red-button" onclick="location.href='details.html'; sessionStorage.setItem('productClicked', 'Original (GF)'); resetCustomizations()">See Details</button>
                     </div>
                 </div>
                 <div class="product">
                     <img src="assets/pumpkin-spice-roll.png" alt="Pumpkin Spice Cinnamon Roll">
                     <div class="product-details">
                         <h2>Pumpkin Spice</h2>
-                        <button type="button" class="red-button">See Details</button>
+                        <button type="button" class="red-button" onclick="location.href='details.html'; sessionStorage.setItem('productClicked', 'Pumpkin Spice'); resetCustomizations()">See Details</button>
                     </div>
                 </div>
                 <div class="product">
                     <img src="assets/caramel-pecan-roll.png" alt="Caramel Pecan Cinnamon Roll">
                     <div class="product-details">
                         <h2>Caramel Pecan</h2>
-                        <button type="button" class="red-button" onclick="location.href='caramel-pecan-details.html'">See Details</button>
+                        <button type="button" class="red-button" onclick="location.href='details.html'; sessionStorage.setItem('productClicked', 'Caramel Pecan'); resetCustomizations()">See Details</button>
                     </div>
                 </div>
                 <div class="product">
                     <img src="assets/blackberry-roll.png" alt="Blackberry Cinnamon Roll">
                     <div class="product-details">
                         <h2>Blackberry</h2>
-                        <button type="button" class="red-button">See Details</button>
+                        <button type="button" class="red-button" onclick="location.href='details.html'; sessionStorage.setItem('productClicked', 'Blackberry'); resetCustomizations()">See Details</button>
                     </div>
                 </div>
                 <div class="product">
                     <img src="assets/walnut-roll.png" alt="Walnut Cinnamon Roll">
                     <div class="product-details">
                         <h2>Walnut</h2>
-                        <button type="button" class="red-button">See Details</button>
+                        <button type="button" class="red-button" onclick="location.href='details.html'; sessionStorage.setItem('productClicked', 'Walnut'); resetCustomizations()">See Details</button>
                     </div>
                 </div>
             </div>
@@ -90,4 +93,5 @@
             </div>
         </footer>
     </body>
+    <script src="main.js" type="text/javascript"></script>
 </html>
