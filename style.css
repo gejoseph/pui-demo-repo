@@ -355,6 +355,7 @@ footer input[type="submit"]:hover {
     padding: 0.5em;
     color: #4a0101;
     font-size: 24px;
+    font-family: 'PT Serif', serif;
 }
 
 .cart-nav {
@@ -389,16 +390,17 @@ footer input[type="submit"]:hover {
     margin-right: 5em;
 }
 
-#main-cart > h2 {
-    margin: 0.5em 5em 0em;
+#main-cart > div > h2 {
+    margin: 0.5em 5em;
     font-size: 24px;
-    color: #4a0101;
+    color: white;
+    padding: 0.5em;
 }
 
 #order-summary {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     border: 2px solid #840000;
     padding: 1em 2em;
     border-radius: 10px;
@@ -406,7 +408,6 @@ footer input[type="submit"]:hover {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    width: 30%;
 }
 
 #order-summary h2 {
@@ -456,15 +457,17 @@ hr {
 .cart-card-content h2 {
     color: #840000;
     font-size: 20px;
+    font-family: 'PT Serif', serif;
 }
 
 .cart-card-content h3 {
     font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .cart-card-content h2, .cart-card-content h3 {
     margin: 0.5em 0em;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    
 }
 
 #cart-list img {
@@ -472,5 +475,35 @@ hr {
 }
 
 #main-cart {
-    margin-bottom: 2em;
+    margin: 0em 0em 2em 0em;
+}
+
+.cart-header {
+    background-color: #840000;
+}
+
+.cart-header .cart-count {
+    color: white;
+}
+
+#product-price {
+    color: #840000;
+}
+
+#order-summary-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#total, #subtotal {
+    color: #840000;
+}
+
+#cart-summary {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
 }

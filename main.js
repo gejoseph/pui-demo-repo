@@ -59,6 +59,7 @@ class CinnamonRoll {
 function resetCustomizations() {
     sessionStorage.setItem("glaze", "No Glaze");
     sessionStorage.setItem("amount", "1");
+    sessionStorage.setItem("price", "2.99");
 }
 
 // event handler for when the value of the glaze select is changed
@@ -73,6 +74,16 @@ function changeAmount(e) {
     var amount = document.getElementById("amount").value;
     // store amount value
     sessionStorage.setItem("amount", amount);
+    sessionStorage.setItem("price", ((2.99)*amount).toFixed(2))
+    // update the price total on the product
+    let priceValue = document.getElementById("product-price")
+    if (amount > 1){
+        priceValue.innerText = "Price (total): $" + sessionStorage.getItem("price") + " ($2.99 each)"
+    }
+    else {
+        priceValue.innerText = "Price (total): $" + sessionStorage.getItem("price")
+    }
+    
 }
 
 // get all the navbar cart counts
@@ -107,7 +118,7 @@ function updateCart(e) {
     var roll = new CinnamonRoll(sessionStorage.getItem("productClicked"), 
                 sessionStorage.getItem("glaze"), 
                 sessionStorage.getItem("amount"), 
-                3);
+                sessionStorage.getItem("price"));
     cart.push(roll);
     console.log(cart);
     sessionStorage.setItem("cart", JSON.stringify(cart));
@@ -159,14 +170,48 @@ function makeToastDisappear() {
     toast.style.display = "none";
 }
 
+// function to remove items from the cart 
+function removeItem(cartIndex) {
+    
+    // removes cart item at the given index
+    console.log(cart)
+    cart.splice(cartIndex, 1);
+    console.log(cart)
+
+    // reset cart in storage
+    sessionStorage.setItem("cart", JSON.stringify(cart))
+
+    // set the cartCount for the navbar display
+    var cartCount = 0;
+    for (order of cart){
+        cartCount += parseInt(order.amount);
+    }
+
+    sessionStorage.setItem("cartCount", cartCount);
+    
+    // set all the navbars to the current cart count
+    for (const navbar of navbars){
+        console.log(navbar)
+        navbar.textContent = "(" + sessionStorage.getItem("cartCount") + ")";
+    }
+
+    // refresh page to show removal
+    location.reload()
+}
+
 // if on the cart page
 if ((cartList = document.getElementById("cart-list")) != null){
 
+    // show items in the cart
     if (cart != null && cart.length != 0){
 
-        for (const item of cart){
+        var index = 0
+        var subtotal = 0;
 
+        for (const item of cart){
+            
             console.log(item)
+            console.log(subtotal)
 
             var img;
             for (var i = 0; i < cinnamonRollTypes.length; i++){
@@ -186,15 +231,27 @@ if ((cartList = document.getElementById("cart-list")) != null){
                                 <h2>${item.type} Cinnamon Roll</h2>
                                 <h3>Glaze: ${item.glaze}</h3>
                                 <h3>Amount: ${item.amount}</h3>
+                                <h3>Price (total): $${item.price}</h3>
+                                <button type="button" class="red-button" onClick="removeItem(${index})">Remove</button>
                             </div>
                         </div>
                     </div>
                     
                 `
-    
+            subtotal += parseFloat(item.price)
+            console.log(index)
+            index++
         }
 
+
+        // update the order summary
+
+        document.getElementById("subtotal").innerText = "$" + parseFloat(subtotal).toFixed(2)
+        document.getElementById("total").innerText = "$" + (parseFloat(subtotal) + 5.00).toFixed(2)
+
+
     }
+    // or indicate that the cart is empty
     else {
         cartList.innerHTML += 
                 `

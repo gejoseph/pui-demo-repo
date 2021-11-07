@@ -25,15 +25,28 @@
             </nav>
         </header>
         <main id="main-cart">
-            <h2>My Cart<span class="cart-count">(0)</span></h2>
+            <div class="cart-header"><h2>Shopping Cart<span class="cart-count">(0)</span></h2></div>
             <div id="cart">
                 <div id="cart-list">
                 </div>
-                <div id="order-summary">
-                    <h2>Order Summary</h2>
-                    <h3>Subtotal:</h3>
-                    <h3>Est.Shipping:</h3>
-                    <h3>Total:</h3>
+                <div id="cart-summary">
+                    <div id="order-summary">
+                        <h2>Order Summary</h2>
+                        <div id="order-summary-text">
+                            <div >
+                                <h3>Subtotal: </h3>
+                                <h3>Est.Shipping: </h3>
+                                <h3>Total: </h3>
+                            </div>
+                            <div>
+                                <h3 id="subtotal"></h3>
+                                <h3>$5.00</h3>
+                                <h3 id="total"></h3>
+                            </div>
+                        </div>
+                        <button type="button" class="red-button" onclick="location.href='none.html'">Checkout</button>
+                    </div>
+                    <button type="button" class="red-button" onclick="location.href='products.html'">Continue Shopping</button>
                 </div>
             </div>
         </main>
