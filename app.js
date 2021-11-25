@@ -126,7 +126,6 @@ if (toptensection != null){
     
         })
     
-    }
 
 }
 
