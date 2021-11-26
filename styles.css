@@ -3,6 +3,7 @@
 body {
     background-color: #fafafa;
     margin: 0;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -292,6 +293,7 @@ section {
     align-items: flex-start;
     height: fit-content;
     padding-bottom: 1.5em;
+    max-width: 200px;
 }
 
 .scroll-unit-text h4 {
@@ -329,6 +331,15 @@ section {
     width: fit-content;
     padding: 0.25em 0.5em;
     margin-right: 1em;
+    font-weight: normal;
+}
+
+.selected-gray-box {
+    border: 2px solid black;
+    background-color: #cacaca;
+    width: fit-content;
+    padding: 0.25em 0.5em;
+    font-weight: bold;
 }
 
 .gray-button {
@@ -356,11 +367,135 @@ button .gray-box:hover {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0em 2em;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
 .filtered-films-img {
     height: 250px;
     padding: 1em 0em;
+}
+
+#poster-gallery {
+    border-right: 1px solid black;
+    padding: 0;
+    height: 100%;
+}
+
+#film-info {
+    padding: 0em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#film-page-title {
+    border-bottom: 1px solid black;
+    height: fit-content;
+}
+
+#film-page-title h3 {
+    padding: 0em 0.8em;
+}
+
+.film-page-main-img {
+    width: 400px;
+    padding: 2em;
+}
+
+.year {
+    font-size: 24px;
+    font-weight: normal;
+    padding: 0em 0.5em;
+}
+
+#film-details {
+    padding: 1em;
+}
+
+#film-details h4 {
+    font-size: 18px;
+    line-height: 36px;
+}
+
+#quote {
+    font-size: 30px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+}
+
+#spoilers h1 {
+    font-weight: bold;
+    font-size: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+    padding: 0em 0.5em;
+    text-align: center;
+}
+
+#extra-info-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#extra-info {
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0em 3em;
+    height: 100%;
+}
+
+.extra-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#film-genres, #availability {
+    display: flex;
+    flex-direction: row;
+    padding: 0em 1em;
+}
+
+#ticket {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#ticket img {
+    width: 500px;
+    padding: 3em 5em;
+    margin: auto;
+}
+
+#bechdel-test, #my-rating {
+    padding: 0em 1em;
+}
+
+#film-review {
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+}
+
+#review-gallery {
+    display: flex;
+    flex-direction: column;
+    padding: 0em;
+}
+
+#review-gallery img {
+    width: 400px;
+    padding: 1em;
+}
+
+#my-review {
+    padding: 0em 4em;
 }

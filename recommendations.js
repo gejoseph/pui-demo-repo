@@ -1,91 +1,5 @@
-// global variables
-
-var filmimages = ["fight-club.png", "dunkirk-art.png", "clockwork-orange-art.png", 
-                    "inception-art.png", "frances-ha-art.png", "call-me-by-your-name-art.png", "psycho-art.png"]
-
-class film {
-    constructor(name, rating, genres, director, 
-        screenplay, producers, cast, cinematography, 
-        releasedate, runningtime, country, language, budget, boxoffice, poster, availability){
-
-        this.name = name;
-        this.rating = rating;
-        this.genres = genres;
-        this.director = director;
-        this.screenplay = screenplay;
-        this.producers = producers;
-        this.cast = cast;
-        this.cinematography = cinematography;
-        this.releasedate = releasedate;
-        this.runningtime = runningtime;
-        this.country = country;
-        this.language = language;
-        this.budget = budget;
-        this.boxoffice = boxoffice;
-        this.poster = poster;
-        this.availability = availability;
-    }
-}
-
-class review {
-    constructor() {
-
-    }
-}
-
-const FightClub = new film("Fight Club", "4.9", ["Action", "Thriller", "Drama", "Comedy", "Crime"], "David Fincher", "Jim Uhls", 
-                    "Art Linson, Ceán Chaffin, Ross Grayson Bell", 
-                    ["Edward Norton", "Brad Pitt", "Helena Bonham Carter", "Meat Loaf Aday"], "Jeff Cronenweth", "October 15, 1999", 
-                    "139", "United States", "English", "63 million", "101.2 million", "fight-club.png", ["HBO Max", "Amazon Prime"]);
-
-var films = [FightClub, FightClub, FightClub, FightClub, FightClub, FightClub, FightClub, FightClub, FightClub, FightClub]
-
-var genres = ["Action", "Adventure", "Crime", "Comedy", "Drama", "Fantasy", "Historical", "Horror", "International", "Mystery", "Romance", "Satire", "Sci-Fi", "Thriller"];
-
-var platforms = ["Amazon Prime", "Disney+", "HBO Max", "Hulu", "Netflix", "YoutubeTV"]
-
-// HOME PAGE
-
-var carousel = document.getElementById("carousel-images");
-
-var carouselimages = document.getElementsByClassName("carousel-img");
-
-var leftcarousel = document.getElementById("left-carousel");
-var rightcarousel = document.getElementById("right-carousel");
-
-for (let i = 0; i < carouselimages.length; i++){
-    carouselimages[i].src = "film-assets/" + filmimages[i];
-}
-
-function left(e) {
-    console.log("left")
-    console.log(filmimages)
-    var end = filmimages.pop()
-    console.log(filmimages)
-    console.log(end)
-    filmimages.unshift(end);
-    console.log(filmimages)
-    for (let i = 0; i < carouselimages.length; i++){
-        carouselimages[i].src = "film-assets/" + filmimages[i];
-    }
-}
-
-function right(e) {
-    console.log("right")
-    console.log(filmimages)
-    var beginning = filmimages.shift()
-    console.log(filmimages)
-    console.log(beginning)
-    filmimages.push(beginning)
-    console.log(filmimages)
-    for (let i = 0; i < carouselimages.length; i++){
-        carouselimages[i].src = "film-assets/" + filmimages[i];
-    }
-}
 
 // RECOMMENDATIONS PAGE
-
-
 
 localStorage.setItem("genre-filters", "[]")
 localStorage.setItem("platform-filters", "[]")
@@ -209,6 +123,7 @@ if (platformfilter != null){
                 filterPlatform(platforms[i]);
             }
         )
+
     }
 
 }
@@ -225,9 +140,14 @@ function filterPlatform(platform) {
     // if already selected
     if (platformfilters.includes(platform)) {
         console.log("selected")
-        platformButton.style.backgroundColor = "#e5e5e5";
-        platformButton.style.border = "1px solid black"
-        platformButton.style.fontWeight = "400"
+
+        // platformButton.style.backgroundColor = "#e5e5e5";
+        // platformButton.style.border = "1px solid black"
+        // platformButton.style.fontWeight = "400"
+
+        platformButton.classList.remove("selected-gray-box")
+        platformButton.classList.add("gray-box")
+
         // remove from platform filters
         platformfilters.splice(platformfilters.indexOf(platform), 1);
         localStorage.setItem("platform-filters", JSON.stringify(platformfilters));
@@ -236,9 +156,15 @@ function filterPlatform(platform) {
     // else select
     else {
         console.log("unselected")
-        platformButton.style.backgroundColor = "#cacaca";
-        platformButton.style.border = "2px solid black"
-        platformButton.style.fontWeight = "bold"
+
+
+        // platformButton.style.backgroundColor = "#cacaca";
+        // platformButton.style.border = "2px solid black"
+        // platformButton.style.fontWeight = "bold"
+
+        platformButton.classList.remove("gray-box")
+        platformButton.classList.add("selected-gray-box")
+
         // add to platform filters
         platformfilters.push(platform);
         localStorage.setItem("platform-filters", JSON.stringify(platformfilters));
@@ -307,15 +233,22 @@ if (filmsection != null && (gf != "" || pf != "")){
 
         filmsection.insertAdjacentHTML("beforeend",
 
-        `<div id="film-${filteredFilms[i].name}" class="scroll-unit">
+        `<a id="film-${filteredFilms[i].name}" class="scroll-unit" href="film.html">
             <img src="film-assets/${filteredFilms[i].poster}" class="filtered-films-img">
             <div class="scroll-unit-text">
                 <h4 class="gray-box">${filteredFilms[i].rating}</h4>
                 <h4 class="film-name">${filteredFilms[i].name}</h4>
             </div>
-        </div>`
+        </a>`
         
         )
+
+        document.getElementById("film-" + filteredFilms[i].name).addEventListener("click", function (e) {
+            
+            localStorage.setItem("film-page-selected", filteredFilms[i].name);
+            console.log(localStorage.getItem("film-page-selected"))
+    
+        })
         
     }
 
@@ -329,15 +262,22 @@ else if (filmsection != null){
 
         filmsection.insertAdjacentHTML("beforeend",
 
-        `<div id="film-${films[i].name}" class="scroll-unit">
+        `<a id="film-${films[i].name}" class="scroll-unit" href="film.html">
             <img src="film-assets/${films[i].poster}" class="filtered-films-img">
             <div class="scroll-unit-text">
                 <h4 class="gray-box">${films[i].rating}</h4>
                 <h4 class="film-name">${films[i].name}</h4>
             </div>
-        </div>`
+        </a>`
         
         )
+
+        document.getElementById("film-" + filteredFilms[i].name).addEventListener("click", function (e) {
+            
+            localStorage.setItem("film-page-selected", filteredFilms[i].name);
+            console.log(localStorage.getItem("film-page-selected"))
+    
+        })
         
     }
 
@@ -411,15 +351,22 @@ function filter() {
 
             filmsection.insertAdjacentHTML("beforeend",
 
-            `<div id="film-${filteredFilms[i].name}" class="scroll-unit">
+            `<a id="film-${filteredFilms[i].name}" class="scroll-unit" href="film.html">
                 <img src="film-assets/${filteredFilms[i].poster}" class="filtered-films-img">
                 <div class="scroll-unit-text">
                     <h4 class="gray-box">${filteredFilms[i].rating}</h4>
                     <h4 class="film-name">${filteredFilms[i].name}</h4>
                 </div>
-            </div>`
+            </a>`
             
             )
+
+            document.getElementById("film-" + filteredFilms[i].name).addEventListener("click", function (e) {
+            
+                localStorage.setItem("film-page-selected", filteredFilms[i].name);
+                console.log(localStorage.getItem("film-page-selected"))
+        
+            })
             
         }
 
@@ -436,27 +383,24 @@ function filter() {
 
             filmsection.insertAdjacentHTML("beforeend",
 
-            `<div id="film-${films[i].name}" class="scroll-unit">
+            `<a id="film-${films[i].name}" class="scroll-unit" href="film.html">
                 <img src="film-assets/${films[i].poster}" class="filtered-films-img">
                 <div class="scroll-unit-text">
                     <h4 class="gray-box">${films[i].rating}</h4>
                     <h4 class="film-name">${films[i].name}</h4>
                 </div>
-            </div>`
+            </a>`
             
             )
+
+            document.getElementById("film-" + filteredFilms[i].name).addEventListener("click", function (e) {
+            
+                localStorage.setItem("film-page-selected", filteredFilms[i].name);
+                console.log(localStorage.getItem("film-page-selected"))
+        
+            })
             
         }
 
     }
-}
-
-// FILM PAGE
-
-var filmtitle = document.getElementById("film-page-title")
-
-if (filmtitle != null) {
-
-    filmtitle.innerText = localStorage.getItem("film-page-selected");
-
 }
