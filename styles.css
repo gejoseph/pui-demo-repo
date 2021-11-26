@@ -380,6 +380,8 @@ button .gray-box:hover {
     border-right: 1px solid black;
     padding: 0;
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 #film-info {
@@ -498,4 +500,40 @@ button .gray-box:hover {
 
 #my-review {
     padding: 0em 4em;
+}
+
+.review-row {
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em;
+}
+
+.review-row img {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    padding: 1em;
+}
+
+.review-row-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1em;
+}
+
+.review-row-text h4, .review-row-text h1 {
+    margin: 0em;
+    padding: 0.25em 0em;
+}
+
+.review-title {
+    font-size: 30px;
+}
+
+.review-year {
+    font-size: 18px;
+    padding: 0em 0.5em;
 }

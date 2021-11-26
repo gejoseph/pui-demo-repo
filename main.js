@@ -47,7 +47,7 @@ const FightClub = new film("Fight Club", "4.9", ["Action", "Thriller", "Drama", 
 const TheShawshankRedemption = new film("The Shawshank Redemption", "4.7", ["Drama"], "Frank Darabont", "Frank Darabont", 
                                 "Niki Marvin", "Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler, Clancy Brown, Gil Bellows, James Whitmore", 
                                 "Roger Deakins", "September 23, 1994", "142", "United States", "English", "25 million", "58.3 million", 
-                                "shawshank-redemption.png", ["HBO Max"], "Get Busy Living, Or Get Busy Dying.", "X");
+                                "shawshank-redemption.png", ["HBO Max"], "Get Busy Living, Or Get Busy Dying.", "X", "shawshank-redemption-art.png", ["shawshank-redemption-1.png", "shawshank-redemption-2.png"]);
 
 var films = [FightClub, TheShawshankRedemption];
 
