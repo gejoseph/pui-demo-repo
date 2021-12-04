@@ -16,7 +16,7 @@ for (let i = 0; i < filmsWithCompleteReviews.length; i++){
                 <h1 class="review-title"><strong>${filmsWithCompleteReviews[i].film.title.toUpperCase()}</strong><span class="review-year">(${filmsWithCompleteReviews[i].film.year})</span></h1>
                 <h4>Starring ${filmsWithCompleteReviews[i].film.stars}</h4>
                 <h4>Directed by ${filmsWithCompleteReviews[i].film.directors}</h4><br><br>
-                <h4><strong>${filmsWithCompleteReviews[i].review[0][0]}</strong>: ${filmsWithCompleteReviews[i].review[0][1]}<strong>Read More...</strong></h4>
+                <h4><strong>${filmsWithCompleteReviews[i].review[0][0]}</strong>: ${filmsWithCompleteReviews[i].review[0][1]}<strong> Read More...</strong></h4>
             </div>
         </a>`
     
