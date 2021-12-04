@@ -304,6 +304,7 @@ section {
 .scroll-unit-text .film-name {
     margin-left: 1em;
     font-size: 16px;
+    max-width: 130px;
 }
 
 #filters {
@@ -421,10 +422,11 @@ button .gray-box:hover {
 }
 
 #quote {
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 400;
     font-style: italic;
     text-align: center;
+    margin: 1.5em;
 }
 
 #spoilers h1 {
@@ -536,4 +538,35 @@ button .gray-box:hover {
 .review-year {
     font-size: 18px;
     padding: 0em 0.5em;
+}
+
+.ticket {
+    width: 625px;
+    height: 275px;
+    margin: 2em 5em;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-image: url("film-assets/ticket.png");
+    background-position: center;
+    background-size: contain;
+}
+
+.ticket h2, .ticket h1 {
+    margin-left: 170px;
+    margin-bottom: 0;
+    width: 250px;
+}
+
+.ticket-title {
+    margin-top: 60px;
+}
+
+.ticket-stars {
+    margin-top: 5px
+}
+
+.ticket h1 {
+    margin-top: 25px;
 }
