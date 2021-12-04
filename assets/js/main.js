@@ -295,7 +295,7 @@ reviewObjects[1].availability = ["HBO Max"]
 reviewObjects[1].rating = 4.9
 reviewObjects[1].bechdel = 0
 reviewObjects[1].review = [
-    // ["First take", "asdfasdf"]
+    ["Review", " is coming soon!!!"]
 ]
 reviewObjects[1].gallery = ["shawshank-redemption-1.png", "shawshank-redemption-2.png", "shawshank-redemption-art.png"]
 
@@ -305,7 +305,7 @@ reviewObjects[2].availability = ["Disney+", "Amazon Prime"]
 reviewObjects[2].rating = 4.9
 reviewObjects[2].bechdel = 3
 reviewObjects[2].review = [
-    // ["First take", "asdfasdf"]
+    ["Review", " is coming soon!!!"]
 ]
 reviewObjects[2].gallery = ["10-things-i-hate-about-you-1.jpeg", "10-things-i-hate-about-you-2.jpeg", "10-things-i-hate-about-you-3.jpeg", "10-things-i-hate-about-you-4.jpeg"]
 
@@ -315,7 +315,7 @@ reviewObjects[3].availability = ["Amazon Prime"]
 reviewObjects[3].rating = 4.8
 reviewObjects[3].bechdel = 0
 reviewObjects[3].review = [
-    // ["First take", "asdfasdf"]
+    ["Review", " is coming soon!!!"]
 ]
 reviewObjects[3].gallery = ["the-usual-suspects-1.jpg", "the-usual-suspects-2.jpg", "the-usual-suspects-3.jpeg"]
 
@@ -325,7 +325,7 @@ reviewObjects[4].availability = ["Hulu", "YoutubeTV"]
 reviewObjects[4].rating = 4.7
 reviewObjects[4].bechdel = 2
 reviewObjects[4].review = [
-    // ["First take", "asdfasdf"]
+    ["Review", " is coming soon!!!"]
 ]
 reviewObjects[4].gallery = ["call-me-by-your-name-1.jpeg", "call-me-by-your-name-2.jpeg", "call-me-by-your-name-3.jpeg"]
 
