@@ -548,19 +548,19 @@ button .gray-box:hover {
     display: flex;
     flex-direction: column;
     align-content: center;
-    background-image: url("film-assets/ticket.png");
+    background-image: url("../../film-assets/ticket.png");
     background-position: center;
     background-size: contain;
 }
 
 .ticket h2, .ticket h1 {
-    margin-left: 170px;
+    margin-left: 160px;
     margin-bottom: 0;
-    width: 250px;
+    width: 270px;
 }
 
 .ticket-title {
-    margin-top: 60px;
+    margin-top: 55px;
 }
 
 .ticket-stars {

@@ -110,7 +110,7 @@ if (toptensection != null){
         toptensection.insertAdjacentHTML("beforeend",
     
         `<a id="topten-${topten[i][0]}" class="scroll-unit" href="film.html">
-            <img src="film-assets/${topten[i][2]}" class="hscroll-img">
+            <img src="film-assets/${topten[i][2]}" class="hscroll-img" alt=${topten[i][0]}>
             <div class="scroll-unit-text">
                 <h4 class="gray-box">${topten[i][1]}</h4>
                 <h4 class="film-name">${topten[i][0]}</h4>
@@ -308,7 +308,7 @@ if (filmsection != null && (gf != "" || pf != "")){
         filmsection.insertAdjacentHTML("beforeend",
 
         `<div id="film-${filteredFilms[i].name}" class="scroll-unit">
-            <img src="film-assets/${filteredFilms[i].poster}" class="filtered-films-img">
+            <img src="film-assets/${filteredFilms[i].poster}" class="filtered-films-img" alt=>
             <div class="scroll-unit-text">
                 <h4 class="gray-box">${filteredFilms[i].rating}</h4>
                 <h4 class="film-name">${filteredFilms[i].name}</h4>
@@ -330,7 +330,7 @@ else if (filmsection != null){
         filmsection.insertAdjacentHTML("beforeend",
 
         `<div id="film-${films[i].name}" class="scroll-unit">
-            <img src="film-assets/${films[i].poster}" class="filtered-films-img">
+            <img src="film-assets/${films[i].poster}" class="filtered-films-img" alt=${films[i].name}>
             <div class="scroll-unit-text">
                 <h4 class="gray-box">${films[i].rating}</h4>
                 <h4 class="film-name">${films[i].name}</h4>
@@ -412,7 +412,7 @@ function filter() {
             filmsection.insertAdjacentHTML("beforeend",
 
             `<div id="film-${filteredFilms[i].name}" class="scroll-unit">
-                <img src="film-assets/${filteredFilms[i].poster}" class="filtered-films-img">
+                <img src="film-assets/${filteredFilms[i].poster}" class="filtered-films-img" alt=>
                 <div class="scroll-unit-text">
                     <h4 class="gray-box">${filteredFilms[i].rating}</h4>
                     <h4 class="film-name">${filteredFilms[i].name}</h4>

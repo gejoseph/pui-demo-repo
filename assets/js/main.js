@@ -266,7 +266,7 @@ async function getAPIids() {
 
 var genres = ["Action", "Adventure", "Crime", "Comedy", "Drama", "Fantasy", "Historical", "Horror", "International", "Mystery", "Romance", "Satire", "Sci-Fi", "Thriller"];
 
-var platforms = ["Amazon Prime", "Disney+", "HBO Max", "Hulu", "Netflix", "YoutubeTV"]
+var platforms = ["Amazon Prime", "Disney+", "HBO Max", "Hulu", "Netflix", "YoutubeTV", "Paramount+"]
 
 var contentRatings = ["G", "PG", "PG-13", "R"]
 
@@ -280,10 +280,9 @@ reviewObjects[0].quote = "we buy things we don't need with money we don't have f
 reviewObjects[0].availability = ["Amazon Prime"]
 reviewObjects[0].rating = 5.0
 reviewObjects[0].bechdel = 1
-reviewObjects[0].review = {
-    "Overall Take" : "",
-    "Cinematography": ""
-}
+reviewObjects[0].review = [
+    ["First take", "asdfasdf"]
+]
 reviewObjects[0].gallery = ["fight-club-1.png", "fight-club-2.png", "fight-club-art.png"]
 
 // The Shawshank Redemption
@@ -291,48 +290,44 @@ reviewObjects[1].quote = "Get Busy Living, Or Get Busy Dying"
 reviewObjects[1].availability = ["HBO Max"]
 reviewObjects[1].rating = 4.9
 reviewObjects[1].bechdel = 0
-reviewObjects[1].review = {
-    "Overall Take" : "",
-    "Cinematography": ""
-}
-reviewObjects[1].gallery = []
+reviewObjects[1].review = [
+    ["First take", "asdfasdf"]
+]
+reviewObjects[1].gallery = ["shawshank-redemption-1.png", "shawshank-redemption-2.png", "shawshank-redemption-art.png"]
 
 // 10 Things I Hate About You
 reviewObjects[2].quote = "I guess, in this society, being male and an asshole makes you worthy of our time."
-reviewObjects[2].availability = []
+reviewObjects[2].availability = ["Disney+", "Amazon Prime"]
 reviewObjects[2].rating = 4.9
 reviewObjects[2].bechdel = 3
-reviewObjects[2].review = {
-    "Overall Take" : "",
-    "Cinematography": ""
-}
-reviewObjects[2].gallery = []
+reviewObjects[2].review = [
+    ["First take", "asdfasdf"]
+]
+reviewObjects[2].gallery = ["10-things-i-hate-about-you-1.jpeg", "10-things-i-hate-about-you-2.jpeg", "10-things-i-hate-about-you-3.jpeg", "10-things-i-hate-about-you-4.jpeg"]
 
 // The Usual Suspects
 reviewObjects[3].quote = "The Greatest Trick The Devil Ever Pulled Was Convincing The World He Did Not Exist."
-reviewObjects[3].availability = []
+reviewObjects[3].availability = ["Amazon Prime"]
 reviewObjects[3].rating = 4.8
 reviewObjects[3].bechdel = 0
-reviewObjects[3].review = {
-    "Overall Take" : "",
-    "Cinematography": ""
-}
-reviewObjects[3].gallery = 
+reviewObjects[3].review = [
+    ["First take", "asdfasdf"]
+]
+reviewObjects[3].gallery = ["the-usual-suspects-1.jpg", "the-usual-suspects-2.jpg", "the-usual-suspects-3.jpeg"]
 
 // Call Me By Your Name
 reviewObjects[4].quote = "We rip out so much of ourselves to be cured of things faster than we should that we go bankrupt by the age of thirty and have less to offer each time we start with someone new. But to feel nothing so as not to feel anything - what a waste!"
-reviewObjects[4].availability = []
+reviewObjects[4].availability = ["Hulu", "YoutubeTV"]
 reviewObjects[4].rating = 4.7
 reviewObjects[4].bechdel = 2
-reviewObjects[4].review = {
-    "Overall Take" : "",
-    "Cinematography": ""
-}
-reviewObjects[4].gallery = []
+reviewObjects[4].review = [
+    ["First take", "asdfasdf"]
+]
+reviewObjects[4].gallery = ["call-me-by-your-name-1.jpeg", "call-me-by-your-name-2.jpeg", "call-me-by-your-name-3.jpeg"]
 
 // Primal Fear
 reviewObjects[5].quote = "I believe in the notion that people are innocent until proven guilty. I believe in that notion because I choose to believe in the basic goodness of people. I choose to believe that not all crimes are committed by bad people. And I try to understand that some very, very good people do some very bad things."
-reviewObjects[5].availability = []
+reviewObjects[5].availability = ["Hulu", "Amazon Prime", "YoutubeTV"]
 reviewObjects[5].rating = 4.7
 reviewObjects[5].bechdel = 1
 reviewObjects[5].review = []
@@ -348,7 +343,7 @@ reviewObjects[6].gallery = []
 
 // V for Vendetta
 reviewObjects[7].quote = " Voila! In view, a humble vaudevillian veteran, cast vicariously as both victim and villain by the vicissitudes of Fate. This visage, no mere veneer of vanity, is a vestige of the vox populi, now vacant, vanished. However, this valorous visitation of a by-gone vexation, stands vivified!!!! and has vowed to vanquish these venal and virulent vermin van-guarding vice and vouchsafing the violently vicious and voracious violation of volition! The only verdict is vengeance; a vendetta, held as a votive, not in vain, for the value and veracity of such shall one day vindicate the vigilant and the virtuous. Verily, this vichyssoise of verbiage veers most verbose, so let me simply add that it is my very good honor to meet you and you may call me V"
-reviewObjects[7].availability = []
+reviewObjects[7].availability = ["HBO Max"]
 reviewObjects[7].rating = 4.6
 reviewObjects[7].bechdel = 2
 reviewObjects[7].review = []
@@ -356,7 +351,7 @@ reviewObjects[7].gallery = []
 
 // Miss Sloane
 reviewObjects[8].quote = "The current system is so porous it floats."
-reviewObjects[8].availability = []
+reviewObjects[8].availability = ["Netflix"]
 reviewObjects[8].rating = 4.5
 reviewObjects[8].bechdel = 3
 reviewObjects[8].review = []
@@ -364,14 +359,14 @@ reviewObjects[8].gallery = []
 
 // Destination Wedding
 reviewObjects[9].quote = "Lindsay: But don't you believe there's someone for everyone? -- Frank: Close, I believe there's nobody for anyone"
-reviewObjects[9].availability = []
+reviewObjects[9].availability = ["Netflix"]
 reviewObjects[9].rating = 4.5
 reviewObjects[9].bechdel = 0
 reviewObjects[9].review = []
 reviewObjects[9].gallery = []
 
 // Good Will Hunting
-reviewObjects[10].availability = []
+reviewObjects[10].availability = ["Hulu", "Amazon Prime", "YoutubeTV"]
 reviewObjects[10].rating = 4.5
 reviewObjects[10].bechdel = 2
 
@@ -381,22 +376,22 @@ reviewObjects[11].rating = 4.5
 reviewObjects[11].bechdel = 3
 
 // Moonlight 
-reviewObjects[12].availability = []
+reviewObjects[12].availability = ["Hulu", "Amazon Prime", "YoutubeTV"]
 reviewObjects[12].rating = 4.5
 reviewObjects[12].bechdel = 3
 
 // Leon the Professional 
-reviewObjects[13].availability = []
+reviewObjects[13].availability = ["Netflix"]
 reviewObjects[13].rating = 4.5
 reviewObjects[13].bechdel = 3
 
 // Black Swan
-reviewObjects[14].availability = []
+reviewObjects[14].availability = ["Hulu"]
 reviewObjects[14].rating = 4.5
 reviewObjects[14].bechdel = 3
 
 // Sing Street 
-reviewObjects[15].availability = []
+reviewObjects[15].availability = ["Amazon Prime"]
 reviewObjects[15].rating = 4.5
 reviewObjects[15].bechdel = 2
 
@@ -411,7 +406,7 @@ reviewObjects[17].rating = 4.3
 reviewObjects[17].bechdel = 2
 
 //Crazy Rich Asians
-reviewObjects[18].availability = []
+reviewObjects[18].availability = ["Hulu", "HBO Max", "YoutubeTV"]
 reviewObjects[18].rating = 4.3
 reviewObjects[18].bechdel = 3
 
@@ -421,27 +416,27 @@ reviewObjects[19].rating = 4.3
 reviewObjects[19].bechdel = 3
 
 //Avengers Endgame
-reviewObjects[20].availability = []
+reviewObjects[20].availability = ["Disney+"]
 reviewObjects[20].rating = 4.3
 reviewObjects[20].bechdel = 3
 
 //Legally Blonde
-reviewObjects[21].availability = []
+reviewObjects[21].availability = ["Hulu", "Amazon Prime"]
 reviewObjects[21].rating = 4.3
 reviewObjects[21].bechdel = 3
 
 //Ordinary People
-reviewObjects[22].availability = []
+reviewObjects[22].availability = ["Paramount+", "Amazon Prime"]
 reviewObjects[22].rating = 4.3
 reviewObjects[22].bechdel = 2
 
 //Parasite
-reviewObjects[23].availability = []
+reviewObjects[23].availability = ["Hulu"]
 reviewObjects[23].rating = 4.3
 reviewObjects[23].bechdel = 3
 
 //Love, Simon
-reviewObjects[24].availability = []
+reviewObjects[24].availability = ["Hulu", "YoutubeTV"]
 reviewObjects[24].rating = 4.3
 reviewObjects[24].bechdel = 3
 
@@ -456,27 +451,27 @@ reviewObjects[26].rating = 4.2
 reviewObjects[26].bechdel = 3
 
 //Mean Girls
-reviewObjects[27].availability = []
+reviewObjects[27].availability = ["Paramount+", "Amazon Prime"]
 reviewObjects[27].rating = 4.2
 reviewObjects[27].bechdel = 3
 
 //Train to Busan
-reviewObjects[28].availability = []
+reviewObjects[28].availability = ["Amazon Prime"]
 reviewObjects[28].rating = 4.2
 reviewObjects[28].bechdel = 2
 
 //The Godfather
-reviewObjects[29].availability = []
+reviewObjects[29].availability = [""]
 reviewObjects[29].rating = 4.1
 reviewObjects[29].bechdel = 0
 
 // About Time
-reviewObjects[30].availability = []
+reviewObjects[30].availability = ["Netflix"]
 reviewObjects[30].rating = 4.1
 reviewObjects[30].bechdel = 2
 
 // Bohemian Rhapsody
-reviewObjects[31].availability = []
+reviewObjects[31].availability = ["Hulu", "YoutubeTV"]
 reviewObjects[31].rating = 4.1
 reviewObjects[31].bechdel = 2
 
@@ -486,72 +481,72 @@ reviewObjects[32].rating = 4.0
 reviewObjects[32].bechdel = 3
 
 // Mrs. Doubtfire
-reviewObjects[33].availability = []
+reviewObjects[33].availability = ["Disney+", "Amazon Prime"]
 reviewObjects[33].rating = 4.0
 reviewObjects[33].bechdel = 2
 
 // The Italian Job
-reviewObjects[34].availability = []
+reviewObjects[34].availability = ["Hulu", "HBO Max", "YoutubeTV"]
 reviewObjects[34].rating = 4.0
 reviewObjects[34].bechdel = 1
 
 // Big Fat Liar
-reviewObjects[35].availability = []
+reviewObjects[35].availability = ["Amazon Prime", "Hulu", "YoutubeTV"]
 reviewObjects[35].rating = 4.0
 reviewObjects[35].bechdel = 2
 
 // Star Wars
-reviewObjects[36].availability = []
+reviewObjects[36].availability = ["Disney+"]
 reviewObjects[36].rating = 4.0
 reviewObjects[36].bechdel = 2
 
 // The Anchorman
-reviewObjects[37].availability = []
+reviewObjects[37].availability = ["Paramount+", "Amazon Prime"]
 reviewObjects[37].rating = 3.9
 reviewObjects[37].bechdel = 1
 
 // The Guilty
-reviewObjects[38].availability = []
+reviewObjects[38].availability = ["Netflix"]
 reviewObjects[38].rating = 3.9
 reviewObjects[38].bechdel = 0
 
 // Night at the Museum
-reviewObjects[39].availability = []
+reviewObjects[39].availability = ["Disney+"]
 reviewObjects[39].rating = 3.9
 reviewObjects[39].bechdel = 2
 
 // Dead Poets Society
-reviewObjects[40].availability = []
+reviewObjects[40].availability = ["Amazon Prime"]
 reviewObjects[40].rating = 3.9
 reviewObjects[40].bechdel = 0
 
 // 1917
-reviewObjects[41].availability = []
+reviewObjects[41].availability = ["Hulu", "Amazon Prime", "YoutubeTV"]
 reviewObjects[41].rating = 3.9
 reviewObjects[41].bechdel = 0
 
 // 27 Dresses
-reviewObjects[42].availability = []
+reviewObjects[42].availability = ["Hulu", "HBO Max"]
 reviewObjects[42].rating = 3.8
 reviewObjects[42].bechdel = 1
 
 // Gattaca
-reviewObjects[43].availability = []
+reviewObjects[43].availability = ["Hulu"]
 reviewObjects[43].rating = 3.8
 reviewObjects[43].bechdel = 1
 
 // Ocean's Eleven 
-reviewObjects[44].availability = []
+reviewObjects[44].availability = ["Hulu"]
 reviewObjects[44].rating = 3.8
 reviewObjects[44].bechdel = 1
 
 // The Devil Wears Prada
-reviewObjects[45].availability = []
+reviewObjects[45].availability = ["Hulu", "Amazon Prime"]
 reviewObjects[45].rating = 3.7
 reviewObjects[45].bechdel = 3
 
 // La La Land
-reviewObjects[46].availability = []
+reviewObjects[46].availability = ["Hulu"]
 reviewObjects[46].rating = 3.7
 reviewObjects[46].bechdel = 3
 
@@ -566,27 +561,27 @@ reviewObjects[48].rating = 3.6
 reviewObjects[48].bechdel = 2
 
 // Scott Pilgrim vs The World
-reviewObjects[49].availability = []
+reviewObjects[49].availability = ["Hulu", "Amazon Prime", "Netflix", "YoutubeTV"]
 reviewObjects[49].rating = 3.6
 reviewObjects[49].bechdel = 1
 
 // Meet Joe Black
-reviewObjects[50].availability = []
+reviewObjects[50].availability = ["Amazon Prime"]
 reviewObjects[50].rating = 3.5
 reviewObjects[50].bechdel = 1
 
 // Arrival
-reviewObjects[51].availability = []
+reviewObjects[51].availability = ["Hulu", "Amazon Prime", "YoutubeTV", "Paramount+"]
 reviewObjects[51].rating = 3.5
 reviewObjects[51].bechdel = 3
 
 // No Strings Attached
-reviewObjects[52].availability = []
+reviewObjects[52].availability = ["Amazon Prime", "Paramount+"]
 reviewObjects[52].rating = 3.0
 reviewObjects[52].bechdel = 2
 
 // Annihilation
-reviewObjects[53].availability = []
+reviewObjects[53].availability = ["Hulu", "Amazon Prime", "YoutubeTV", "Paramount+"]
 reviewObjects[53].rating = 2.0
 reviewObjects[53].bechdel = 3
 
