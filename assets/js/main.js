@@ -120,7 +120,7 @@ const moviesIHaveSeen = ["Fight Club",
 
 // FETCHING THE DATA THROUGH THE API IF ITS NOT IN LOCAL STORAGE
 
-if (localStorage.getItem("filmObjects") == null){
+if (localStorage.getItem("filmObjects") == []){
 
     // initialize filmObjects array
     var filmObjects = [];

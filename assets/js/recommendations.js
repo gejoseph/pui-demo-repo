@@ -3,6 +3,8 @@
 
 //<h4 class="gray-box">${filteredFilms[i].rating}</h4>
 
+filmObjects = 
+
 localStorage.setItem("genre-filters", "[]")
 localStorage.setItem("platform-filters", "[]")
 localStorage.setItem("content-rating-filters", "[]")
