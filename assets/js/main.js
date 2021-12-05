@@ -275,7 +275,7 @@ var contentRatings = ["G", "PG", "PG-13", "R"]
 
 // ONLY 10 OF THE MOVIES HAVE FULL REVIEWS CURRENTLY
 
-reviewObjects = JSON.parse(localStorage.getItem("review-objects"))
+reviewObjects = JSON.parse(localStorage.getItem("reviewObjects"))
 
 // Fight Club
 reviewObjects[0].quote = "we buy things we don't need with money we don't have for people we don't like"
