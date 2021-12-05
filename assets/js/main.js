@@ -275,6 +275,8 @@ var contentRatings = ["G", "PG", "PG-13", "R"]
 
 // ONLY 10 OF THE MOVIES HAVE FULL REVIEWS CURRENTLY
 
+reviewObjects = JSON.parse(localStorage.getItem("review-objects"))
+
 // Fight Club
 reviewObjects[0].quote = "we buy things we don't need with money we don't have for people we don't like"
 reviewObjects[0].availability = ["Amazon Prime"]
@@ -589,6 +591,7 @@ reviewObjects[53].availability = ["Hulu", "Amazon Prime", "YoutubeTV", "Paramoun
 reviewObjects[53].rating = 2.0
 reviewObjects[53].bechdel = 3
 
+localStorage.setItem("review-objects", reviewObjects)
 
 
 
