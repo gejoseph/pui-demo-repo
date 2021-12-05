@@ -277,7 +277,7 @@ var contentRatings = ["G", "PG", "PG-13", "R"]
 
 reviewObjects = JSON.parse(localStorage.getItem("reviewObjects"))
 
-if (reviewObjects != null){
+if (reviewObjects.length > 0){
 
 
 
