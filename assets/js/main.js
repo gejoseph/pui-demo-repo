@@ -277,6 +277,10 @@ var contentRatings = ["G", "PG", "PG-13", "R"]
 
 reviewObjects = JSON.parse(localStorage.getItem("reviewObjects"))
 
+if (reviewObjects != null){
+
+
+
 // Fight Club
 reviewObjects[0].quote = "we buy things we don't need with money we don't have for people we don't like"
 reviewObjects[0].availability = ["Amazon Prime"]
@@ -598,7 +602,7 @@ localStorage.setItem("review-objects", reviewObjects)
 
 
 
-
+}
 
 
 
